@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 6
+  services:
+    - docker
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker build -t levino/price-api:master .
+      - docker push levino/price-api:master
+  versionbuild:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker build -t levino/price-api:$CIRCLE_TAG .
+      - docker push levino/price-api:$CIRCLE_TAG
