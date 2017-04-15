@@ -7,6 +7,7 @@
   "author": "Levin Keller <post@levinkeller.de>",
   "scripts": {
     "start": "node build/start.js",
+    "babelstart": "babel-node lib/start.js",
     "preview": "babel-watch --watch lib lib/start.js",
     "build": "babel lib --out-dir build --copy-files --source-maps --ignore test.js",
     "prebuild": "rm -rf build",
