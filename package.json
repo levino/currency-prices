@@ -1,6 +1,6 @@
 {
   "name": "currency-prices",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An API to get exchange rates for currencies and crypto currencies",
   "main": "build/index.js",
   "repository": "git@github.com:Levino/currency-prices.git",
