@@ -1,0 +1,61 @@
+{
+  "name": "@hardfork/exchange-rates",
+  "version": "0.0.1",
+  "description": "An API to get exchange rates for currencies and crypto currencies",
+  "main": "build/index.js",
+  "repository": "git@github.com:Levino/exchange-rates.git",
+  "author": "Levin Keller <post@levinkeller.de>",
+  "scripts": {
+    "start": "node build/start.js",
+    "preview": "babel-watch --watch lib lib/start.js",
+    "build": "babel lib --out-dir build --copy-files --source-maps --ignore test.js",
+    "prebuild": "rm -rf build",
+    "test": "mocha -t 5000 -u tdd --compilers js:babel-core/register \"./{,!(node_modules)/**/}*.test.js\"",
+    "dev": "mocha --watch -t 5000 -u tdd --compilers js:babel-core/register \"./{,!(node_modules)/**/}*.test.js\"",
+    "lint": "standard"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-watch": "^2.0.6",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chai-subset": "^1.4.0",
+    "eslint": "^3.16.1",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "flow-bin": "^0.40.0",
+    "mocha": "^3.2.0",
+    "randomstring": "^1.1.5",
+    "standard": "^8.6.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "coindesk-api": "^0.1.4",
+    "express": "^4.15.2",
+    "express-validator": "^3.1.3",
+    "fixer-api": "^1.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongoose": "^4.9.4"
+  },
+  "standard": {
+    "env": {
+      "mocha": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "allowImportExportEverywhere": true,
+      "sourceType": "module"
+    }
+  }
+}
