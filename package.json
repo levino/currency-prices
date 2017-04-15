@@ -15,7 +15,7 @@
     "dev": "mocha --watch -t 5000 -u tdd --compilers js:babel-core/register \"./{,!(node_modules)/**/}*.test.js\"",
     "lint": "standard"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",

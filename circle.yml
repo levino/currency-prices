@@ -16,11 +16,11 @@ deployment:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker build -t levino/price-api:master .
-      - docker push levino/price-api:master
+      - docker build -t levino/currency-prices:master .
+      - docker push levino/currency-prices:master
   versionbuild:
     tag: /v[0-9]+(\.[0-9]+)*/
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker build -t levino/price-api:$CIRCLE_TAG .
-      - docker push levino/price-api:$CIRCLE_TAG
+      - docker build -t levino/currency-prices:$CIRCLE_TAG .
+      - docker push levino/currency-prices:$CIRCLE_TAG
