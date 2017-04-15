@@ -1,9 +1,9 @@
 {
-  "name": "@hardfork/exchange-rates",
+  "name": "currency-prices",
   "version": "0.0.1",
   "description": "An API to get exchange rates for currencies and crypto currencies",
   "main": "build/index.js",
-  "repository": "git@github.com:Levino/exchange-rates.git",
+  "repository": "git@github.com:Levino/currency-prices.git",
   "author": "Levin Keller <post@levinkeller.de>",
   "scripts": {
     "start": "node build/start.js",
