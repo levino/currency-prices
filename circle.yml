@@ -3,6 +3,13 @@ machine:
     version: 6
   services:
     - docker
+dependencies:
+  pre:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
+  override:
+    - yarn
+  cache_directories:
+    - ~/.cache/yarn
 
 deployment:
   master:
