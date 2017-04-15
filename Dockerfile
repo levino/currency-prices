@@ -11,5 +11,6 @@ RUN yarn build
 RUN rm -rf /usr/src/app/lib
 
 ENV NODE_ENV production
+EXPOSE 3000
 
 CMD [ "npm", "start" ]
