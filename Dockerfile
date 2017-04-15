@@ -9,8 +9,7 @@ RUN yarn
 COPY . /usr/src/app
 RUN yarn build
 RUN rm -rf /usr/src/app/lib
-RUN rm -rf /usr/src/app/node_modules
-RUN yarn --production
+RUN rm -rf /usr/src/app/node_modules && yarn --production && yarn cache clean
 
 ENV NODE_ENV production
 EXPOSE 3000
