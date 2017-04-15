@@ -10,4 +10,6 @@ COPY . /usr/src/app
 RUN yarn build
 RUN rm -rf /usr/src/app/lib
 
+ENV NODE_ENV production
+
 CMD [ "npm", "start" ]
